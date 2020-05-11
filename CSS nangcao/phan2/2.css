@@ -1,0 +1,57 @@
+*{
+	margin:0;
+	padding:0;
+}
+.to {
+	width: 220px;
+	height:220px;
+	position: relative;
+}
+.to .duoi, .to .tren,
+.to .den ,
+.to .bong {
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: 1;
+	width: 100%;
+	height:100%;
+	background: brown;
+	border-radius: 50%;
+	transition: 1.5s;
+}
+.to .bong{
+	width:220px;
+	height:16px;
+	background:url(shadow.png) center center;
+	background-size: cover;
+	top: 100%;
+	left: 300%;
+}
+.to:hover .bong {
+	left:0%;
+}
+.to .tren{
+	z-index: 2;
+	background:url(1.png) center center;
+	box-shadow:inset 0 0px 0 20px rgba(141, 140, 140, 0.21);
+/*	transform:rotateZ(0deg);
+	    transform-origin: 95% 40%;*/
+	 left:300%;
+	 transform: rotateZ(0deg);
+}
+.to .den {
+	width:10px;
+	height:10px;
+	background: black;
+	z-index: 3; 
+	left:95%;
+	top:40%;
+	transform:translateX(-5px) translateY(-5px)  ;
+ }
+.to:hover .duoi{}
+.to:hover .tren{
+	/*transform:rotateZ(-75deg);*/
+ left:0%;
+ transform: rotateZ(-360deg);
+}

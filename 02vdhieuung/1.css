@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*hieu ung tuong tac facebook*/
+.danhsach{
+	position: absolute;
+	top: 35px;
+	right: -13px;
+	width: 200px;
+	opacity: 0;
+	visibility: hidden;
+}
+.danhsach:after{
+	content: "";
+	position: absolute;
+	top: -20px;
+	width: 0;
+	height: 0;
+	border: 11px rgba(255,215,0,0) solid;
+	border-bottom-color: white;
+	right: 8px;
+}
+.tamgiac{
+	color: white;
+	font-size: 19px;
+	transition: 0.4s;
+	color: black;
+	cursor: pointer;
+}
+.motphantu{
+	position: relative;
+	float: right;
+	margin-right: 200px;
+	color: white;
+	margin-top: 7px;
+	transition: 0.4s;
+	
+}
+.thanhxanh{
+	height: 43px;
+	background: #3b5998;
+}
+li.list-group-item:hover {
+    color: white;
+    background: #3b5998;
+}
+li.list-group-item{
+	font-size: 13px;
+	padding: 5px 26px;
+	color: black;
+}
+.tamgiactrang{
+	color: white;
+}
+.ra{
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+
+.card{
+	transition: 0.4s;
+}
+.diphai{
+	transform: translateX(400px); //cach 1
+	/*animation: sangphai 1s forwards;  */
+	/*cach 2.chuyen dong tu do hon dinh nghia, chi dung duoc 1 chieu, khong tu chuyen dong nguoc lai giong transition*/
+}
+@-webkit-keyframes sangphai{
+	0% {transform: translateX(0);margin-top: 0px;opacity: 1;}
+	50% {transform: translateX(400px);margin-top: 0px;opacity: 1;}
+	80% {transform: translateX(400px);margin-top: 200px;opacity: 1;}
+	100% {transform: translateX(800px);margin-top: 200px;opacity: 0;}
+}
+
+
+.chieuso1{
+	animation: chieu1 1s forwards !important;
+
+}
+@-webkit-keyframes chieu1 {
+	0%{transform: translateX(0px) translateY(0px);}
+	25%{transform: translateX(200px) translateY(0px);}
+	50%{transform: translateX(200px) translateY(200px);}
+	80%{transform: translateX(500px) translateY(200px);}
+	90%{transform: translateX(500px) translateY(500px);}
+	100%{transform: translateX(700px) translateY(500px);}
+}
+#kcm{
+	animation: chieu2 3s forwards;
+}
+@-webkit-keyframes chieu2 {
+	100%{transform: translateX(0px) translateY(0px);}
+	90%{transform: translateX(200px) translateY(0px);}
+	80%{transform: translateX(200px) translateY(200px);}
+	50%{transform: translateX(500px) translateY(200px);}
+	25%{transform: translateX(500px) translateY(500px);}
+	0%{transform: translateX(700px) translateY(500px);}
+}
+.ko-cdong{
+	animation: none !important;
+}
+

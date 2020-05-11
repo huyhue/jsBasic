@@ -1,0 +1,29 @@
+* {margin:0; padding:0;}
+.to {
+	width:400px;
+	height:300px;
+	position: relative;
+	margin:auto;
+	perspective:2000px;
+}
+.to .anh, .to .xanh{
+	position: absolute;
+	left:0;
+	top:0;
+	z-index: 1;
+	width:100%;
+	height: 300px;
+	transition:0.4s;
+}
+.to .xanh{
+	z-index: 2;
+	width: 50%;
+	background:#2c3f52;
+	transform:rotateY(-91deg);
+	transform-origin:0% 100%; 
+	backface-visibility: hidden;
+}
+.to:hover .anh{}
+.to:hover .xanh{
+	transform:rotateY(0deg);
+}

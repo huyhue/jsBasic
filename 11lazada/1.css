@@ -1,0 +1,80 @@
+*{margin:0; padding:0 ;}
+.menu {
+	width:100%;
+	background:#183544;
+	transition:0.4s;
+	position: fixed;
+	top:0px;
+	z-index: 100; 
+	overflow: hidden;
+}
+.menu  .menutop{
+	height:40px;
+	background:#11252f;
+	transition: 0.4s;
+}
+.menu  .menumid{
+	background:#183544;
+	height:80px;
+	border-bottom:1px solid black;
+}
+.menu  .menumid  .phaisearch{}
+.menu  .menumid  .trailogo{}
+.menu  .menumid  .trailogo img{
+    height: 50px;
+    padding: 15px;
+    transition: .4s;
+}
+.menu  .menubottom{
+	height: 30px;
+	background:#183544;
+	transition: 0.4s;
+}
+
+.noidung {
+	width:400px;
+	margin:auto;
+	font-family:segoe ui light;
+	line-height: 22px;
+	color:#414141;
+}
+
+.truotlen {
+	transform:translateY(-200px);
+	opacity:0;
+}
+
+.bienhinh1  .menutop {
+	height: 0px;
+	overflow: hidden;
+}
+.bienhinh1  .menubottom {
+	height: 0px;
+	overflow: hidden;
+}
+
+.tatcadanhmuc {
+	position: absolute;
+    top: 32px;
+    color: white;
+    left: 30px;
+    font-family: segoe ui light;
+    transition: 0.4s; 
+    opacity:0;
+    visibility: hidden;
+    transform: translateY(100px);
+	cursor: pointer;
+	color:gray;
+}
+.tatcadanhmuc:hover {color: white;}
+
+.bienhinh1 .tatcadanhmuc {
+	transform:translateY(0);
+	opacity:1;
+	visibility: visible;
+}
+.tatcadanhmuc .nut{}
+
+.menu .menubottom.botdira {
+	height: 30px;
+}

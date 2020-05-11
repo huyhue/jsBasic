@@ -1,0 +1,126 @@
+*{}
+.khoi3 {
+	width: 400px; height: 300px;
+	position: relative;
+}
+.khoi3 img {width: 400px;}
+.khoi3:after,  .khoi3:before {
+	content:"";
+ 	position: absolute;
+	top:20px;
+	left: 30px;
+	width:340px;
+	height:260px;
+	border:1px solid white;
+	border-left-color:transparent;
+	border-right-color:transparent;
+	transition: 0.4s;
+	transform:scaleX(0);
+}
+.khoi3:before {
+	 border-top-color:transparent;
+	 border-bottom-color:transparent;
+	 border-left-color:white;
+	 border-right-color:white;
+	 transform: scaleY(0);
+}
+.khoi3:hover:after {
+	transform:scaleX(1);
+}
+.khoi3:hover:before {
+	 transform: scaleY(1);
+}
+
+.khoi2 {
+	width: 400px;
+	height:300px;
+	position: relative;
+	overflow: hidden;
+}
+.khoi2 img{}
+.khoi2:before{
+	content:"";
+	width: 700px;
+	height:500px;
+	background:black;
+	transform-origin: 0 0 ; 
+	transition: 0.4s; 
+	position: absolute;
+	top:300px;
+	left:0px;
+	transform:rotateZ(0deg);
+}
+.khoi2:hover:before{
+	transform:rotateZ(-25deg);
+
+}
+.to {
+	width:400px;
+	height:300px;
+	position: relative;
+	perspective: 700px;
+}
+.nho img {
+	position: absolute;
+	top:0px;
+	left:0px;
+	z-index: 1; 
+	width:400px;
+	height:300px;
+	transition:.3s;
+	transform-origin: 0% 0%;
+}
+
+.to:hover .nho img:nth-child(4) {
+	transform:rotateX(35deg) ;}
+.to:hover .nho img:nth-child(3) {
+	transform:rotateX(25deg) ;}
+.to:hover .nho img:nth-child(2) {
+	transform:rotateX(15deg) ;}
+.to:hover .nho img:nth-child(1) {
+	transform:rotateX(5deg) ;}
+
+.quayX .nho img:nth-child(4) {
+	transform:rotateX(35deg) ;}
+.quayX .nho img:nth-child(3) {
+	transform:rotateX(25deg) ;}
+.quayX .nho img:nth-child(2) {
+	transform:rotateX(15deg) ;}
+.quayX .nho img:nth-child(1) {
+	transform:rotateX(5deg) ;}
+
+
+.bigg {
+	width:400px;
+	height:300px;
+	perspective: 700px;
+	margin:auto;
+}
+.smalll {
+	width:400px;
+	height:300px;
+	position: relative;
+	transform-style: preserve-3d;
+	transform: rotateX(0deg) rotateY(0deg);
+	transition:0.4s;
+}
+.bigg:hover .smalll {
+	transform:rotateX(-35deg) rotateY(20deg);
+}
+.smalll img {
+	position: absolute;
+	top:0px;
+	left:0px;
+	z-index: 4;
+	width:400px;
+	height:300px;
+	transition:.3s;
+	transform-origin: 0% 0%;
+}
+.bigg .smalll img:nth-child(4) {transform: translateZ(1px);} 
+.bigg .smalll img:nth-child(3) {
+transform: translateZ(-100px);	 } 
+.bigg .smalll img:nth-child(2) {
+transform: translateZ(-200px);	 } 
+.bigg .smalll img:nth-child(1) {
+transform: translateZ(-300px);	 } 
