@@ -1,43 +1,43 @@
 document.addEventListener("DOMContentLoaded",function(){
-	// bien su dung .declick
+	// biến sử dụng để .declick
 	var nut = document.getElementsByClassName('declick');
 	var nd = document.getElementsByClassName('dehienthi');
 
 	for (var i = 0; i < nut.length; i++) {
 		nut[i].onclick = function(){
-			// click vao cai da hien thi roi
-			console.log(this.classList); 
+			// click vào cái đã hiển thị rồi
+			// console.log(this.classList); 
 			if(this.classList[1] == 'mautrang')	{ 
-				
-				// bo mau trang o chinh no
-				this.classList.remove('mautrang')		; 
+				console.log(this.classList[1]);
+				// bỏ màu trắng của chính nó
+				this.classList.remove('mautrang'); 
 
-				// 3 dong duoi la cho div cua doi tuong dc click an di
-				var ndhienra =  this.getAttribute('data-hienlen');
+				// 3 dòng dưới là cho div của đối tượng được click ẩn đi
+				var ndhienra = this.getAttribute('data-hienlen');
 				var phan_tu_hien_ra = document.getElementById(ndhienra);
 				phan_tu_hien_ra.classList.remove('ra');
 			}
-			else  // click vao cac cai con lai 
+			else  // click vào các cái còn lại
 			{
-				// cho tat ca bo mau trang di 
+				// cho tất cả bỏ màu trắng đi
 				for (var k = 0; k < nut.length; k++) {
 					nut[k].classList.remove('mautrang');  
 				}
 
-				// doi tuong dc click (this) thanh mau trang
+				// đối tượng được click (this) thành màu trắng
 				this.classList.toggle('mautrang');
 
 
-				//lay ve cai data-hienlien
+				//lấy về cái data-hienlien 
 				var ndhienra =  this.getAttribute('data-hienlen');
 				var phan_tu_hien_ra = document.getElementById(ndhienra);
 
-				// cho tat ca cac div  .dehienthi khac an di 
+				// cho tất cả các div  .dehienthi khác ẩn đi
 				for (var i = 0; i < nd.length; i++) {
 					nd[i].classList.remove('ra');
 				}
 
-				// cho div cua doi tuong dc click hien thi ra 
+				// cho div của đối tượng được click hiển thi ra
 				phan_tu_hien_ra.classList.toggle('ra');
 			}
 	 		

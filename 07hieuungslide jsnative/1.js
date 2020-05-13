@@ -1,38 +1,35 @@
 ﻿document.addEventListener("DOMContentLoaded",function(){
-	// khai bao mot so doi tuong can su dung
+	// khai báo một số biến cần dùng
 	var nut = document.querySelectorAll('.chuyenslide ul li');
 	var slides = document.querySelectorAll('.cacslide ul li');
-	var thoigian = setInterval(function(){ autoSlide(); },3000);
+	var thoigian = setInterval(function(){ autoSlide(); }, 3000);
 	
+	 // nut trả về một mảng nút
 
-
-
-	 // nut tra ve mot mang nut 
-
-	 // bat su kien click cho tung nut
+	 // bắt sự kiện click cho từng nút
 	for (var i = 0; i < nut.length; i++) {
 		nut[i].addEventListener('click',function(){
-			//truoc tien huy tu chuyen dong(trong auto slide khi ban muon dung o cho nao)
-			clearInterval(thoigian);   //click tren nut
+			//Trước tiên tự hủy chuyển động (trong auto slide khi bạn muốn đựng tự chuyển động ở chỗ nào)
+			clearInterval(thoigian);   //click trên nút
 
-			// bo tat ca mau den di 
+			// bỏ tất cả màu đen nút đi
 			for (var i = 0; i < nut.length; i++) {
 				nut[i].classList.remove('kichhoat');
 			}
 			this.classList.add('kichhoat');
-			// het phan xử ly chuyển màu của nút slide
+			// hết phần xử lý chuyển màu của nút slide
 
-			// xu ly phan tinh vi tri 
+			// xủ lý phần tính vị trí
 			//console.log(this.previousElementSibling);
-			var nutkichhoat = this ; 
+			var nutkichhoat = this; 
 			var vitrinut = 0 ; 
 			for (vitrinut = 0;nutkichhoat = nutkichhoat.previousElementSibling; vitrinut++) {	
 				// console.log("bien i = "+vitrinut);
 				// console.log('phan tu nut kich hoat la '+nutkichhoat);
 			}
-			// het vong lap nay thi bien i = so thu tu
-			// console.log(" vi tri cua phan thu co class la kich hoat la = " + vitrinut );			 		
-			// buoc 1 : cho tat ca slide an di = cach remove class active
+			// Hết vòng lặp này thì biến i = số thứ tự
+			// console.log("Vị trí của phần tử có class kích hoạt là = " + vitrinut );			 		
+			// Bước 1 : Cho tất cả các slide ẩn đi bằng cách remove class active
 			for (var i = 0; i < slides.length; i++) {
 				slides[i].classList.remove('active');
 				slides[vitrinut].classList.add('active');
@@ -40,43 +37,44 @@
 		 	
 		})
 	}   
-	// het su kien cho nut
+	// Hết sự kiện cho nút
 	
 	// var thoigian = setInterval(function(){
 	// 	console.log("Tada !");
 	// },5000);
 
 
-	// viet hàm tự chuyển slide 
+	// Viết hàm tự chuyển slide trong một khoảng thời gian xác định
 	function autoSlide(){
-		// buoc 1 : xem slide nao dang hien thi 
-		var vitrislide = 0 ; 
+		// Bước 1 : Xem slide nào đang hiển thị
+		var vitrislide = 0; 
 		var slideHienTai = document.querySelector('.cacslide ul li.active');
 		// console.log(slideHienTai.previousElementSibling);			
 		// console.log(slideHienTai);			
 		for (vitrislide = 0; slideHienTai = slideHienTai.previousElementSibling; vitrislide++) {}
-			// nếu mà chưa đến slide cuối cùng tức là vitrislide < slides.length - 1 --> hoat dong binh thuong 
+
+			// Nếu mà chưa đến slide cuối cùng tức là vitrislide < slides.length - 1 --> Hoạt động bình thường 
 			if(vitrislide < (slides.length-1)){
-				// cho an het di 
+				// Cho ẩn hết đi
 				for (var i = 0; i < slides.length; i++) {
 					slides[i].classList.remove('active');
 					nut[i].classList.remove('kichhoat');
 				}
-				// cho phan tu tiep theo cua slide hien thi ra 
+				// Cho phần tử tiếp theo của slide hiển thị ra
 				slides[vitrislide].nextElementSibling.classList.add('active');
 				nut[vitrislide].nextElementSibling.classList.add('kichhoat'); 
 			}
-			else {
+			else {  //Đến phần tử cuối rồi
 				for (var i = 0; i < slides.length; i++) {
 					slides[i].classList.remove('active');
 					nut[i].classList.remove('kichhoat');
 				}
-				// cho phan tu tiep theo cua slide hien thi ra 
+				// Cho phần tử đầu tiên của slide hiển thị ra
 				slides[0].classList.add('active');
 				nut[0].classList.add('kichhoat');
 			}
 
-		// console.log("Vi tri cua nut hien tai la " + vitrislide);	
+		// console.log("Vị trí của nút hiện tại là: " + vitrislide);	
 	}
 
 })

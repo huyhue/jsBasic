@@ -103,23 +103,22 @@ nutTrai.addEventListener('click',chuyenSlideChoNutTrai);*/
 
 
 
-//PHẦN 2: chuan hoa code, toi gian lai code so voi cach lam tren
+//PHẦN 2: Chuẩn hóa code, tối giãn lại code so với cách làm trên
 /*
 var nutPhai = document.querySelector('.nuts b.phai'),
  	nutTrai = document.querySelector('.nuts b.trai'),
  	slides = document.querySelectorAll('.slides ul li'),
  	chiSoHienTai = 0 ,
  	soLuongSlide = slides.length,
- 	trangThai = 'dangDungYen'	;
+ 	trangThai = 'dangDungYen';
 function xacDinh2SlideVaChuyendong(nutnao){
 	if(trangThai == 'dangChuyenDong') { return false ;	}
 	trangThai = 'dangChuyenDong';
 	var trangThaiCua2ChuyenDong = 0 ; 
 	var phanTuHienTai = slides[chiSoHienTai] ;
 
-	if(nutnao == 'nutTrai')
-	{
-		if(chiSoHienTai > 0 )	 { 	chiSoHienTai-- ; 	 }	 
+	if(nutnao == 'nutTrai'){
+		if(chiSoHienTai > 0 ){ 	chiSoHienTai-- ; 	 }	 
 	 	else{ 	chiSoHienTai = soLuongSlide - 1 ;	 }		
 	}
 	else if(nutnao == 'nutPhai'){
@@ -183,7 +182,7 @@ nutTrai.addEventListener('click',chuyenSlideChoNutTrai);
 
 
 
-//PHẦN 3: chuan hoa code, toi gian lai code so voi cach lam tren
+//PHẦN 3: Chuẩn hóa code, tối giãn lại code so với cách làm trên
 //dùng rút gọn bằng toán tử 3 ngôi (nhị nguyên)
 // (1) ? (2) : (3);
 var nutPhai = document.querySelector('.nuts b.phai'),
@@ -191,7 +190,7 @@ var nutPhai = document.querySelector('.nuts b.phai'),
  	slides = document.querySelectorAll('.slides ul li'),
  	chiSoHienTai = 0,
  	soLuongSlide = slides.length,
- 	trangThai = 'dangDungYen'	;
+ 	trangThai = 'dangDungYen';
 function xacDinh2SlideVaChuyendong(nutnao){
 	if(trangThai == 'dangChuyenDong') { return false ;	}
 	trangThai = 'dangChuyenDong';

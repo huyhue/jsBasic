@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded",function() {
 	nut.onclick = function(){
 		if (trangthai == "lan1") {
 			console.log("click lan 1");
-			trangthai ="lan2";
+			trangthai = "lan2";
 			khoi.classList.remove('ko-cdong');
 			khoi.classList.add('chieuso1');
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded",function() {
 		}
 		else if (trangthai == "lan2") {
 			console.log("click lan 2");
-			trangthai ="lan1";
+			trangthai = "lan1";
 			khoi.classList.remove('chieuso1');
 		}
 	}
@@ -60,6 +60,8 @@ document.addEventListener("DOMContentLoaded",function() {
 //Tong quat hoa: truyen vao gia tri, ap dung cho tat ca, viet 1 lan truyen cho nhieu cho
 document.addEventListener("DOMContentLoaded",function() {
 	var nut = document.getElementsByClassName('nuttongquat');
+	// console.log(nut);
+	
 	for (var i = 0; i < nut.length; i++) {
 		nut[i].onclick = function(){
 		console.log(this.getAttribute('data-matkhau'));

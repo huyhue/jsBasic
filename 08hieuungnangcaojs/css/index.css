@@ -5,7 +5,11 @@ html,body,#slidewrapper,.slides,.slides ul,.slides ul li, .slides ul li ._1slide
     width: 100%;
 }
 
-#slidewrapper{position: relative;overflow: hidden; background:black;}
+#slidewrapper{
+    position: relative;
+    overflow: hidden; 
+    background:black;
+}
 .slides {
 }
 .slides ul{position: relative;}
