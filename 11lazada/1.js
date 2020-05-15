@@ -1,9 +1,9 @@
-
+//Khai báo các biến cần dùng
 var logo = document.querySelector(".logo"),
 	menu = document.querySelector('.menu'),
 	nutdanhmuc = document.querySelector('.tatcadanhmuc'),
 	menubottom = document.querySelector('.menubottom'),
-	nut = document.querySelector('.nut');
+	nut = document.querySelector('.nut'),
 	console.log(nutdanhmuc),
 	trangthai = 'binhthuong';
 	

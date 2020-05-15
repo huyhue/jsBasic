@@ -2,22 +2,21 @@ var nutphai = document.querySelector('.phai'),
 	nuttrai = document.querySelector('.trai'),
 	noidungslide = document.querySelector('.noidungslide');
  
-// click vào nut phai thi cho nut trai hien len
-// va slide dich sang 
+// Click vào nút phải thì cho nút trái hiện lên và slide dịch sang
 nutphai.addEventListener('click',function(){
-	// cho chinh no bien mat 
+	// Cho nó biến mất
 	this.classList.remove('active');
-	// cho trai hien ra 
+	// Cho nút trái hiện ra
 	nuttrai.classList.add('active');
-	// cho slide truot sang 
+	// Cho slide trượt sang
 	noidungslide.classList.add('truotSang');
 })
 
 nuttrai.addEventListener('click',function(){
-	// cho chinh no bien mat 
+	// Cho nó biến mất
 	this.classList.remove('active');
-	// cho trai hien ra 
+	// Cho nút phải hiện ra
 	nutphai.classList.add('active');
-	// cho slide truot sang 
+	// Cho slide trượt về 
 	noidungslide.classList.add('truotVe');
 })

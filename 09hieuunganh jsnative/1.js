@@ -1,3 +1,4 @@
+//khai báo các biến cần thiết
  var anhs = document.querySelectorAll('.cacAnh img'),
 	nenDen = document.querySelector('.nenden'),
 	dongLai = document.querySelector('.dongLai'),
@@ -8,13 +9,14 @@
 	thuTuCuaActive = 0;
 
  	 		
-// khi click vao nut dong
+// Khi click vao nút đóng
 // dongLai.addEventListener('click',function(){
 // 	nenDen.classList.remove('ra');		
 // 	thongtinanh.classList.remove('ra');		
 // })
 
-// khi click vao nen den cũng như click vào nút đóng nên bỏ nút đóng đi
+
+// Khi click vào nền đen cũng như click vào nút đóng nên bỏ nút đóng đi
 nenDen.addEventListener('click',function(){
 	nenDen.classList.remove('ra');
 	thongtinanh.classList.remove('ra');		
@@ -22,23 +24,25 @@ nenDen.addEventListener('click',function(){
 	anhActive.classList.remove('active');
 })
   
+
+//Click vào ảnh thì ảnh đó hiển thị ra
 for (var i = 0; i < anhs.length; i++) {
 	anhs[i].addEventListener('click',function(){
 		nenDen.classList.add('ra');		
 		thongtinanh.classList.add('ra');
 		var anhDuocClick = this; 
 		for (var chiSo = 0;anhDuocClick = anhDuocClick.previousElementSibling; chiSo++){}	
-		// in ra ra phan tu dc active  
+		// In ra phần tử được active  
 		thuTuCuaActive = chiSo;
 	 	khoiCacAnhLis[chiSo].classList.add('active');
 	})
 }		
 
-var hienTai2 = thuTuCuaActive;  //khai báo biến toàn cục để không bị lỗi
+var hienTai2 = thuTuCuaActive;  //Khai báo biến toàn cục để không bị lỗi
 
 nphai.addEventListener('click',function(){
-	// console.log("so luong Anh la "+ khoiCacAnhLis.length);
-	//Xac dinh phan tu tiep theo
+	// console.log("Số lượng các ảnh là: "+ khoiCacAnhLis.length);
+	//Xác định phần tử tiếp theo
 	var soLuongAnh = khoiCacAnhLis.length;
 	var phanTuHienTai = khoiCacAnhLis[hienTai2];
 

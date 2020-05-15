@@ -1,9 +1,16 @@
-*{}
+*{
+	margin: 0;
+	padding: 0;
+}
+/*Đây là Khối 3 nek*/
 .khoi3 {
-	width: 400px; height: 300px;
+	width: 400px; 
+	height: 300px;
 	position: relative;
 }
-.khoi3 img {width: 400px;}
+.khoi3 img {
+	width: 400px;
+}
 .khoi3:after,  .khoi3:before {
 	content:"";
  	position: absolute;
@@ -18,10 +25,10 @@
 	transform:scaleX(0);
 }
 .khoi3:before {
-	 border-top-color:transparent;
-	 border-bottom-color:transparent;
-	 border-left-color:white;
-	 border-right-color:white;
+	 border-top-color: transparent;
+	 border-bottom-color: transparent;
+	 border-left-color: white;
+	 border-right-color: white;
 	 transform: scaleY(0);
 }
 .khoi3:hover:after {
@@ -31,6 +38,7 @@
 	 transform: scaleY(1);
 }
 
+/*Đây là khối 2 nè*/
 .khoi2 {
 	width: 400px;
 	height:300px;
@@ -39,46 +47,47 @@
 }
 .khoi2 img{}
 .khoi2:before{
-	content:"";
+	content: "";
 	width: 700px;
-	height:500px;
-	background:black;
+	height: 500px;
+	background: black;
 	transform-origin: 0 0 ; 
 	transition: 0.4s; 
 	position: absolute;
-	top:300px;
-	left:0px;
-	transform:rotateZ(0deg);
+	top: 300px;
+	left: 0px;
+	transform: rotateZ(0deg);
 }
 .khoi2:hover:before{
-	transform:rotateZ(-25deg);
-
+	transform: rotateZ(-25deg);
 }
+
+/*Đây là to nhỏ nè*/
 .to {
-	width:400px;
-	height:300px;
+	width: 400px;
+	height: 300px;
 	position: relative;
 	perspective: 700px;
 }
 .nho img {
 	position: absolute;
-	top:0px;
-	left:0px;
+	top: 0px;
+	left: 0px;
 	z-index: 1; 
-	width:400px;
-	height:300px;
-	transition:.3s;
+	width: 400px;
+	height: 300px;
+	transition: 0.3s;
 	transform-origin: 0% 0%;
 }
 
 .to:hover .nho img:nth-child(4) {
-	transform:rotateX(35deg) ;}
+	transform: rotateX(35deg) ;}
 .to:hover .nho img:nth-child(3) {
-	transform:rotateX(25deg) ;}
+	transform: rotateX(25deg) ;}
 .to:hover .nho img:nth-child(2) {
-	transform:rotateX(15deg) ;}
+	transform: rotateX(15deg) ;}
 .to:hover .nho img:nth-child(1) {
-	transform:rotateX(5deg) ;}
+	transform: rotateX(5deg) ;}
 
 .quayX .nho img:nth-child(4) {
 	transform:rotateX(35deg) ;}
@@ -90,37 +99,35 @@
 	transform:rotateX(5deg) ;}
 
 
+/*Đây là bigg smalll nek*/
 .bigg {
-	width:400px;
-	height:300px;
+	width: 400px;
+	height: 300px;
 	perspective: 700px;
-	margin:auto;
+	margin: auto;
 }
 .smalll {
-	width:400px;
-	height:300px;
+	width: 400px;
+	height: 300px;
 	position: relative;
 	transform-style: preserve-3d;
 	transform: rotateX(0deg) rotateY(0deg);
-	transition:0.4s;
+	transition: 0.4s;
 }
 .bigg:hover .smalll {
-	transform:rotateX(-35deg) rotateY(20deg);
+	transform: rotateX(-35deg) rotateY(20deg);
 }
 .smalll img {
 	position: absolute;
-	top:0px;
-	left:0px;
+	top: 0px;
+	left: 0px;
 	z-index: 4;
-	width:400px;
-	height:300px;
-	transition:.3s;
+	width: 400px;
+	height: 300px;
+	transition: 0.3s;
 	transform-origin: 0% 0%;
 }
-.bigg .smalll img:nth-child(4) {transform: translateZ(1px);} 
-.bigg .smalll img:nth-child(3) {
-transform: translateZ(-100px);	 } 
-.bigg .smalll img:nth-child(2) {
-transform: translateZ(-200px);	 } 
-.bigg .smalll img:nth-child(1) {
-transform: translateZ(-300px);	 } 
+.bigg .smalll img:nth-child(4) {transform: translateZ(1px);      } 
+.bigg .smalll img:nth-child(3) {transform: translateZ(-100px);	 } 
+.bigg .smalll img:nth-child(2) {transform: translateZ(-200px);	 } 
+.bigg .smalll img:nth-child(1) {transform: translateZ(-300px);	 } 

@@ -20,7 +20,7 @@
 	width: 50%;
 	background:#2c3f52;
 	transform:rotateY(-91deg);
-	transform-origin:0% 100%; 
+	transform-origin: 0% 100%; 
 	backface-visibility: hidden;
 }
 .to:hover .anh{}

@@ -6,7 +6,7 @@ var nutPhai = document.querySelector('.nuts b.phai'),
  	chiSoHienTai = 0 ,
  	soLuongSlide = slides.length,
 
- 	// xu ly loi click lien tiep nhieu lan trong chuong trinh, bởi vì nó sẽ bị lắc khi kích liên tục
+ 	// Xử lý lỗi khi click liên tiếp nhiều lần trong chương trình, bởi vì nó sẽ bị lắc khi kích liên tục
  	//giúp dù ta có click liên tục thì nó vẫn chạy ổn định.
  	trangThai = 'dangDungYen';
  	 		
@@ -16,10 +16,8 @@ var nutPhai = document.querySelector('.nuts b.phai'),
 
 // goi su kien click vao nut phai
 var chuyenSlideChoNutPhai = function(){
-	// kiem tra luon trang thai, neu dang chuyen dong  
-	if(trangThai == 'dangChuyenDong') { return false;	
-// dung chuong trinh
-	} 
+	// Kiểm tra luôn trạng thái, nếu đang chuyển động thì dừng chương trình
+	if(trangThai == 'dangChuyenDong') { return false;	} 
 
 	// den dong nay tuc la dang dung yen, xu ly chuyen dong
 	// danh dau la dang chuyen dong 
@@ -27,14 +25,14 @@ var chuyenSlideChoNutPhai = function(){
 	var trangThaiCua2ChuyenDong = 0;
 
 	var phanTuHienTai = slides[chiSoHienTai];
-	// xac dinh chi so cua phan Tu Tiep theo dua tren phan tu hien tai 
-	if(chiSoHienTai < soLuongSlide - 1){ // chua den cuoi 
+	// Xác định chỉ số của phần tử tiếp theo dựa vào phần tử hiện tại
+	if(chiSoHienTai < soLuongSlide - 1){ // chưa đến cuối
 		chiSoHienTai = chiSoHienTai + 1; 
-	}else { // la phan tu cuoi cung roi 
+	}else { // là phần tử cuối cùng rồi
 		chiSoHienTai = 0; 
 	}
 	var phanTuTiepTheo = slides[chiSoHienTai];
-	// check chuyen dong ket thuc 
+	// check chuyển động kết thúc
 	var xuLyHienTaiKetThucCD = function(){		 
 		this.classList.remove('dangxem');
 		this.classList.remove('bienMatKhiAnNext');
@@ -47,10 +45,10 @@ var chuyenSlideChoNutPhai = function(){
 		trangThaiCua2ChuyenDong++;  // = 2
 		if(trangThaiCua2ChuyenDong==2){trangThai = 'dangDungYen';}
 	}
-	//webkitAnimationEnd chuyen dong cuoi cung
+	//webkitAnimationEnd chuyển động cuối cùng
 	phanTuTiepTheo.addEventListener("webkitAnimationEnd",xuLyTiepTheoKetThucCD);
 	phanTuHienTai.addEventListener("webkitAnimationEnd",xuLyHienTaiKetThucCD);
-	// tao chuyen dong sau khi xac dinh dc 2 phan tu 
+	// Tạo chuyển động sau khi xác định được 2 phần tử
 	phanTuHienTai.classList.add('bienMatKhiAnNext');
 	phanTuTiepTheo.classList.add('diVaoKhiAnNext');
 };
@@ -71,7 +69,7 @@ var chuyenSlideChoNutTrai = function(){
 	 	// chua den cuoi cung
 	  { 	chiSoHienTai-- ; 	 }	 
 	 else{	 	
-	 // dang o phan tu dau tien , ko lui duoc nua, cho chuyen san phan tu thu 5 
+	 // Đang ở phần tử đầu tiên , không lùi được nữa, cho chuyển sang phần tử thứ 5 
 	 	chiSoHienTai = soLuongSlide - 1 ;	 }
 	 var phanTuTiepTheo = slides[chiSoHienTai];
 	 //----------
@@ -94,9 +92,6 @@ var chuyenSlideChoNutTrai = function(){
 	 phanTuHienTai.classList.add('bienMatKhiAnPrev');
 	 phanTuTiepTheo.classList.add('diVaoKhiAnPrev');
 
-
-
-
 }
 nutTrai.addEventListener('click',chuyenSlideChoNutTrai);*/
 
@@ -108,9 +103,10 @@ nutTrai.addEventListener('click',chuyenSlideChoNutTrai);*/
 var nutPhai = document.querySelector('.nuts b.phai'),
  	nutTrai = document.querySelector('.nuts b.trai'),
  	slides = document.querySelectorAll('.slides ul li'),
- 	chiSoHienTai = 0 ,
+ 	chiSoHienTai = 0,
  	soLuongSlide = slides.length,
  	trangThai = 'dangDungYen';
+
 function xacDinh2SlideVaChuyendong(nutnao){
 	if(trangThai == 'dangChuyenDong') { return false ;	}
 	trangThai = 'dangChuyenDong';
@@ -194,7 +190,7 @@ var nutPhai = document.querySelector('.nuts b.phai'),
 function xacDinh2SlideVaChuyendong(nutnao){
 	if(trangThai == 'dangChuyenDong') { return false ;	}
 	trangThai = 'dangChuyenDong';
-	var trangThaiCua2ChuyenDong = 0 ; 
+	var trangThaiCua2ChuyenDong = 0; 
 	var phanTuHienTai = slides[chiSoHienTai] ;	 
 
 	chiSoHienTai = (nutnao == 'nutTrai') ? ((chiSoHienTai > 0) ?  (chiSoHienTai-1)  : (soLuongSlide - 1)) : ((chiSoHienTai < soLuongSlide - 1) ? (chiSoHienTai+1) : 0); 
@@ -203,7 +199,7 @@ function xacDinh2SlideVaChuyendong(nutnao){
  	var xuLyHienTaiKetThucCD = function(){		 
 		this.classList.remove('dangxem');
 		this.classList.remove((nutnao == 'nutTrai') ? ('bienMatKhiAnPrev') : ('bienMatKhiAnNext')) ;  
-		trangThaiCua2ChuyenDong++ ; 
+		trangThaiCua2ChuyenDong++; 
 		trangThai = (trangThaiCua2ChuyenDong==2) ? 'dangDungYen' : trangThai; 
 	} 
 	var xuLyTiepTheoKetThucCD = function(){		

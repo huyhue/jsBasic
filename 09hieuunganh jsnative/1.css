@@ -6,7 +6,6 @@ b.ntrai,b.nphai {
     width: 48px;
     height: 48px;
     background-position: 0 -46px;
-    /* float: right; */
     margin: 20px 20px 0 0;
     opacity: 0.6;
     position: absolute;
@@ -181,7 +180,6 @@ body,html {
 }
 .motkhoi .avatar {
     height: 70px;
-    /* background: green; */
     padding-top: 10px;
     padding-bottom: 13px;
 }
@@ -204,8 +202,6 @@ body,html {
     opacity:0;
     visibility: hidden;
  }
-
-
 
  .dongLai {
     background-image: url(images/12.png);

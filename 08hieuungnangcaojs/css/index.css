@@ -8,7 +8,7 @@ html,body,#slidewrapper,.slides,.slides ul,.slides ul li, .slides ul li ._1slide
 #slidewrapper{
     position: relative;
     overflow: hidden; 
-    background:black;
+    background: black;
 }
 .slides {
 }
@@ -56,6 +56,7 @@ html,body,#slidewrapper,.slides,.slides ul,.slides ul li, .slides ul li ._1slide
         opacity: 0;
     }
 }
+
 .diVaoKhiAnNext{animation:ani2 1s forwards;}
 @-webkit-keyframes ani2 {
     from {
@@ -67,6 +68,7 @@ html,body,#slidewrapper,.slides,.slides ul,.slides ul li, .slides ul li ._1slide
         opacity: 1;
     }
 }
+
 .bienMatKhiAnPrev {
     animation: ani2_nguoc 1s forwards ; 
 }
@@ -81,6 +83,7 @@ html,body,#slidewrapper,.slides,.slides ul,.slides ul li, .slides ul li ._1slide
         opacity: 0;
     }
 }
+
 .diVaoKhiAnPrev{
     animation:ani1_nguoc 1s ease ;
 }

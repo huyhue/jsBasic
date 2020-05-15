@@ -51,10 +51,10 @@
 	left: 0px;
 }
 
-
 .nut .active{
 	opacity: 1;
 }
+
 .noidungslide.truotSang {
 	transition: 0.4s;
 	transform: translateX(-1000px);

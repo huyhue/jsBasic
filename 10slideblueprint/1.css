@@ -48,7 +48,7 @@
     width: 500%;
     height: 500px;
     transition: 0.4s;
-    transform:translateX(0px);
+    transform: translateX(0px);
 }
 
 ._5slide {
@@ -64,8 +64,8 @@
     float: left;
 }
 ._5nut li.active {
-	background:#48a3da;
-	color:white;
+	background: #48a3da;
+	color: white;
 }
 
 ._5slide ul.so0{transform:translateX(0px);}
